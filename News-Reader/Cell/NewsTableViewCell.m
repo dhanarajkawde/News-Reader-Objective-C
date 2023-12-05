@@ -28,7 +28,14 @@
 
 - (void)setData:(Article *)article {
     self.lblTitle.text = article.title;
-    self.lblDescription.text = article.theDescription;
+    
+    if ([article.theDescription isKindOfClass:[NSString class]]) {
+        self.lblDescription.text = article.theDescription;
+    }
+    else {
+        self.lblDescription.text = @"";
+    }
+    
     [self.imgViwNews loadImageWithStringURL: article.urlToImage];
     
     self.lblPublishedDate.text = [NSString stringWithFormat:@"Date: %@", [Constants convertServerDateToCurrentDate:article.publishedAt]];
