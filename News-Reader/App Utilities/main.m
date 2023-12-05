@@ -2,7 +2,7 @@
 //  main.m
 //  News-Reader
 //
-//  Created by Coditas on 04/12/23.
+//  Created by Dhanraj Kawade on 04/12/23.
 //
 
 #import <UIKit/UIKit.h>
@@ -14,5 +14,6 @@ int main(int argc, char * argv[]) {
         // Setup code that might create autoreleased objects goes here.
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
+
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
